@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3253087622441861611}
   - component: {fileID: 3253087622441861604}
   - component: {fileID: 3253087622441861605}
+  - component: {fileID: 710124945}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -130,3 +131,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   cameraOffset: {x: 0, y: 12.8, z: -8.92}
+--- !u!114 &710124945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253087622441861606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778c6ba682764a848a20c8e95975c075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  haveDogFood: 0
+  haveKey: 0
+  haveToy: 0
