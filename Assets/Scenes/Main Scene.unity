@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 89762929}
   - component: {fileID: 89762928}
   m_Layer: 0
-  m_Name: Plane (5)
+  m_Name: SisterRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 105781506}
   - component: {fileID: 105781505}
   m_Layer: 0
-  m_Name: Plane (8)
+  m_Name: BrotherRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 126273024}
   - component: {fileID: 126273023}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: EntryCorridor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 303045948}
   - component: {fileID: 303045947}
   m_Layer: 0
-  m_Name: Plane (11)
+  m_Name: TwinRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 1091573014}
   - component: {fileID: 1091573013}
   m_Layer: 0
-  m_Name: Plane (6)
+  m_Name: ParentBathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 1303626204}
   - component: {fileID: 1303626203}
   m_Layer: 0
-  m_Name: Plane (7)
+  m_Name: ParentBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,7 +945,7 @@ GameObject:
   - component: {fileID: 1366075873}
   - component: {fileID: 1366075872}
   m_Layer: 0
-  m_Name: Plane (3)
+  m_Name: DiningRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 1481108275}
   - component: {fileID: 1481108274}
   m_Layer: 0
-  m_Name: Plane (2)
+  m_Name: LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,7 +1137,7 @@ GameObject:
   - component: {fileID: 1596850979}
   - component: {fileID: 1596850978}
   m_Layer: 0
-  m_Name: Plane (12)
+  m_Name: Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1233,7 +1233,7 @@ GameObject:
   - component: {fileID: 1746528346}
   - component: {fileID: 1746528345}
   m_Layer: 0
-  m_Name: Plane (9)
+  m_Name: StairCorridor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1272,7 +1272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 93f04f87f98b4b44db5b9d1c86cbc27a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1329,7 +1329,7 @@ GameObject:
   - component: {fileID: 1865715432}
   - component: {fileID: 1865715431}
   m_Layer: 0
-  m_Name: Plane (10)
+  m_Name: PlayerRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 1984539184}
   - component: {fileID: 1984539183}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: MainCorridor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1521,7 +1521,7 @@ GameObject:
   - component: {fileID: 1997841503}
   - component: {fileID: 1997841502}
   m_Layer: 0
-  m_Name: Plane (4)
+  m_Name: Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1611,6 +1611,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1934242053, guid: 8cca0a37f2d447f45826840dccc0c20d, type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3253087622441861605, guid: 8cca0a37f2d447f45826840dccc0c20d, type: 3}
       propertyPath: cameraOffset.x
       value: 0
