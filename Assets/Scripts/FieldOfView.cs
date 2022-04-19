@@ -36,25 +36,30 @@ public class FieldOfView : MonoBehaviour
 
     #region variables and arrays
     // public variables
-    public float viewRadius;
-    [Range(0,360)]
-    public float viewAngle;
 
+    [Tooltip("The Cone Mesh")]
+    public MeshFilter viewMeshFilter;
+
+    [Header("Vision Size")]
+    [Range(1, 50)]
+    public float viewRadius = 2.5f;
+    [Range(0,360)]
+    public float viewAngle = 60f;
+
+    [Header("Masks")]
     public LayerMask targetMask;
     public LayerMask obstacleMask;
-
-    [HideInInspector]
+    
     public List<Transform> visibleTargets = new List<Transform>();
 
     [Range(0.1f, 1.0f)]
-    public float meshResolution;
-    public int edgeResolveIterations;
-    public float edgeDistanceThreshold;
-
-    public MeshFilter viewMeshFilter;
+    public float meshResolution = 1f;
+    public int edgeResolveIterations = 1;
+    public float edgeDistanceThreshold = 1;    
 
     // private variables
     Mesh viewMesh;
+    EnemyController controller;
     #endregion
 
     #region public functions
@@ -77,12 +82,23 @@ public class FieldOfView : MonoBehaviour
     #region start & update functions
     void Start()
     {
+        controller = GetComponent<EnemyController>();
+
         viewMesh = new Mesh();
         viewMesh.name = "ViewMesh";
         viewMeshFilter.mesh = viewMesh;
         viewMesh.RecalculateNormals();
 
         StartCoroutine("FindTargetsWithDelay", .2f);
+    }
+
+    private void Update()
+    {
+        /*if(PlayerInVision())
+        {
+            Debug.Log("Enemy can see player");
+        }*/
+        //FindVisibleTargets();
     }
 
     void LateUpdate()
@@ -96,7 +112,17 @@ public class FieldOfView : MonoBehaviour
     {
         while (true) {
             yield return new WaitForSeconds(delay);
-            FindVisibleTargets();
+
+            //FindVisibleTargets();
+
+            //if(visibleTargets.Count > 0)
+                //Debug.Log("Detected Target: " + visibleTargets[0]);
+
+            if(PlayerInVision() && controller.State != EnemyState.Follow)
+            {
+                //Debug.Log("Enemy can see player");
+                controller.State = EnemyState.Follow;
+            }
         }
     }
 
@@ -121,6 +147,34 @@ public class FieldOfView : MonoBehaviour
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// Checks if an object in the player layer is withing the 
+    /// </summary>
+    /// <returns>true or false based on whether the enemy can see the player</returns>
+    bool PlayerInVision()
+    {
+        Collider[] targetsInViewRadius = 
+            Physics.OverlapSphere(transform.position, viewRadius, targetMask);
+
+        if(targetsInViewRadius.Length > 0)
+        {
+            Transform target = targetsInViewRadius[0].transform;
+            Vector3 dirToTarget = (target.position - transform.position).normalized;
+
+            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
+            {
+                float distanceTorTaget = Vector3.Distance(transform.position, target.position);
+
+                if (!Physics.Raycast(transform.position, dirToTarget, distanceTorTaget, obstacleMask))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -248,7 +302,7 @@ public class FieldOfView : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + viewAngleA * viewRadius);
         Gizmos.DrawLine(transform.position, transform.position + viewAngleB * viewRadius);
 
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.green;
         foreach(Transform visibleTarget in visibleTargets)
         {
             Gizmos.DrawLine(transform.position, visibleTarget.position);
