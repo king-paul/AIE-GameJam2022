@@ -1331,8 +1331,8 @@ MonoBehaviour:
     m_Bits: 8
   visibleTargets: []
   meshResolution: 1
-  edgeResolveIterations: 0
-  edgeDistanceThreshold: 0
+  edgeResolveIterations: 1
+  edgeDistanceThreshold: 1
   viewMeshFilter: {fileID: 1731129686}
 --- !u!23 &1829464215
 MeshRenderer:

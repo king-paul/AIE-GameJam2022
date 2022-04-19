@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public enum EnemyState
 {
@@ -34,8 +35,7 @@ public class EnemyController : MonoBehaviour
     //bool clockwise;
     Direction targetRotation;
 
-    public EnemyState State { set => state = value; }
-    
+    public EnemyState State { get => state; set => state = value; }    
 
     // Start is called before the first frame update
     void Start()
@@ -156,5 +156,14 @@ public class EnemyController : MonoBehaviour
     private void StartLooking()
     {
         State = EnemyState.Look;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.other.tag == "Player")
+        {            
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
+        }
+
     }
 }
