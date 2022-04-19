@@ -48,14 +48,14 @@ public class FieldOfView : MonoBehaviour
 
     [Header("Masks")]
     public LayerMask targetMask;
-    public LayerMask obstacleMask;
-    
-    public List<Transform> visibleTargets = new List<Transform>();
+    public LayerMask obstacleMask;    
 
     [Range(0.1f, 1.0f)]
     public float meshResolution = 1f;
     public int edgeResolveIterations = 1;
-    public float edgeDistanceThreshold = 1;    
+    public float edgeDistanceThreshold = 1;
+
+    private List<Transform> visibleTargets = new List<Transform>();
 
     // private variables
     Mesh viewMesh;
