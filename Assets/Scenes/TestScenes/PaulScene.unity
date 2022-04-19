@@ -1345,6 +1345,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4517443178187900734, guid: 1b56fc08980631742b0ea0784c98afdc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517443178187900734, guid: 1b56fc08980631742b0ea0784c98afdc, type: 3}
       propertyPath: rightAngle
       value: 90
       objectReference: {fileID: 0}
@@ -1421,6 +1425,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5326732021878636330, guid: 48a3a98c593271947886239c5687de24, type: 3}
   m_PrefabInstance: {fileID: 341675286}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1862462848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3491533456655762278, guid: 1b56fc08980631742b0ea0784c98afdc, type: 3}
+  m_PrefabInstance: {fileID: 1426926017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1862462855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862462848}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148c00b7a98060149a8526f831773deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fov: 90
+  rayCount: 50
+  angle: 0
+  viewDistance: 0.5
 --- !u!4 &1875466292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5326732021878636330, guid: 48a3a98c593271947886239c5687de24, type: 3}

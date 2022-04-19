@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
     public Transform mesh;
@@ -60,7 +61,8 @@ public class PlayerMovement : MonoBehaviour
         if (direction != Vector3.zero)
         {
             direction.Normalize();
-            mesh.forward = direction; // rotate character mesh to face direction it is moving
+            if(mesh)
+                mesh.forward = direction; // rotate character mesh to face direction it is moving
         }
 
         controller.Move(direction * moveSpeed * Time.deltaTime);
