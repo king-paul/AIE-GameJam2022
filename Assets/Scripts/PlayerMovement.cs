@@ -23,15 +23,51 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vertical = transform.forward * Input.GetAxis("Vertical");
-        horizontal = transform.right * Input.GetAxis("Horizontal");
-        direction = new Vector3(horizontal.x, 0, vertical.z);
-        
-        controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
-    }
+        if (Input.GetKey("w"))
+        {
+            vertical = transform.forward * Input.GetAxis("Vertical");
+            horizontal = transform.right * Input.GetAxis("Vertical") * -1;
 
+            direction = new Vector3(horizontal.x, 0, vertical.z);
+
+            controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey("s"))
+        {
+            vertical = transform.forward * Input.GetAxis("Vertical");
+            horizontal = transform.right * Input.GetAxis("Vertical") * -1;
+
+            direction = new Vector3(horizontal.x, 0, vertical.z);
+
+            controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
+
+        }
+        if (Input.GetKey("a"))
+        {
+            vertical = transform.forward * Input.GetAxis("Horizontal");
+            horizontal = transform.right * Input.GetAxis("Horizontal");
+
+            direction = new Vector3(horizontal.x, 0, vertical.z);
+
+            controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
+
+
+        }
+        if (Input.GetKey("d"))
+        {
+            vertical = transform.forward * Input.GetAxis("Horizontal");
+            horizontal = transform.right * Input.GetAxis("Horizontal");
+
+            direction = new Vector3(horizontal.x, 0, vertical.z);
+
+            controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
+
+
+        }
+    }
     private void LateUpdate()
     {
         camera.position = transform.position + cameraOffset;
     }
 }
+
