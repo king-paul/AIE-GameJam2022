@@ -40,7 +40,7 @@ public class PlayerEvent : MonoBehaviour
         if(hit.gameObject.layer == 6) // enemy layer
         {
             // reload the scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().ToString(), LoadSceneMode.Single);
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
 
     }

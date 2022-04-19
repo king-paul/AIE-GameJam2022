@@ -5,10 +5,23 @@ using UnityEngine.AI;
 
 public class EnemyPatrol : MonoBehaviour
 {
+    [Tooltip("The number of seconds the enemy will stop on each waypoint before moving to another")]
+    [Range(0f, 10f)]
+    public float waitTime = 5f;
+
+    [Tooltip("Holds all of the waypoints in the enmies patrol route")]
     public Transform[] patrtolRoute;
 
     private int wayPointNum = 0;
+    
     NavMeshAgent agent;
+    EnemyController controller;
+
+    public void MoveToNextWayPoint()
+    {
+        controller.State = EnemyState.Patrol;
+        agent.destination = patrtolRoute[wayPointNum].position;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +29,8 @@ public class EnemyPatrol : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.destination = patrtolRoute[wayPointNum].position;
 
-        GetComponent<EnemyController>().State = EnemyState.Patrol;
+        controller = GetComponent<EnemyController>();
+        controller.State = EnemyState.Patrol;
     }
 
     // Update is called once per frame
@@ -34,7 +48,8 @@ public class EnemyPatrol : MonoBehaviour
             else
                 wayPointNum = 0;
 
-            agent.destination = patrtolRoute[wayPointNum].position;
+            controller.State = EnemyState.Standby;
+            Invoke("MoveToNextWayPoint", waitTime);
         }
     }
 
