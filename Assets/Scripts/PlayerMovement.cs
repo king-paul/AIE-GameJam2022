@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Transform mesh;
+
+    [Header("Movement")]
     [Range(0, 10)]
     public float moveSpeed = 3f;
     public bool diagonalMovement = false;
+
+    [Header("Camera")]
     public bool offSetCamera = false;
     public Vector3 cameraOffset = new Vector3(0, 12.8f, -8.92f);    
 
@@ -20,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        camera = transform.GetChild(0);
+        camera = Camera.main.transform;
 
         if (camera.rotation.y >= 0)
         {
@@ -37,13 +42,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (diagonalMovement)
+        // player will move up down, left and right when camera is rotated
+        if (diagonalMovement) 
         {
             vertical = transform.forward * Input.GetAxis("Vertical");
             horizontal = transform.right * Input.GetAxis("Horizontal");
             direction = new Vector3(horizontal.x, 0, vertical.z);
         }
-        else
+        else // player will move with isometric grid
         {
             vertical = upRight * Input.GetAxis("Vertical");
             horizontal = downRight * Input.GetAxis("Horizontal");
@@ -51,7 +57,13 @@ public class PlayerMovement : MonoBehaviour
             direction = vertical + horizontal;
         }
 
-        controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
+        if (direction != Vector3.zero)
+        {
+            direction.Normalize();
+            mesh.forward = direction; // rotate character mesh to face direction it is moving
+        }
+
+        controller.Move(direction * moveSpeed * Time.deltaTime);
     }
 
     private void LateUpdate()
