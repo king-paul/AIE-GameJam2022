@@ -133,6 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f835d78311ba234fa33cc6094e8daba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 2
+  leftAngle: -90
+  rightAngle: 90
+  turnSpeed: 60
+  waitTime: 2
 --- !u!1 &5310711630268559191
 GameObject:
   m_ObjectHideFlags: 0

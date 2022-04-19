@@ -435,6 +435,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4368765967516557780, guid: cb0b0df2b228b3440834f0e4093254d5, type: 3}
+      propertyPath: waitTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368765967516557780, guid: cb0b0df2b228b3440834f0e4093254d5, type: 3}
       propertyPath: patrtolRoute.Array.data[0]
       value: 
       objectReference: {fileID: 2046673082}
@@ -442,9 +446,17 @@ PrefabInstance:
       propertyPath: patrtolRoute.Array.data[1]
       value: 
       objectReference: {fileID: 783178425}
+    - target: {fileID: 4667389024209737090, guid: cb0b0df2b228b3440834f0e4093254d5, type: 3}
+      propertyPath: state
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8572515762991456382, guid: cb0b0df2b228b3440834f0e4093254d5, type: 3}
       propertyPath: m_Name
       value: Patroling Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8572515762991456382, guid: cb0b0df2b228b3440834f0e4093254d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb0b0df2b228b3440834f0e4093254d5, type: 3}
