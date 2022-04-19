@@ -14,7 +14,7 @@ public class OpeningScene : MonoBehaviour
     IEnumerator Placeholder()
     {
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
     }
 
     
