@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 3f;
     public bool diagonalMovement = false;
 
-    [Header("Camera")]
-    public bool offSetCamera = false;
-    public Vector3 cameraOffset = new Vector3(0, 12.8f, -8.92f);    
+    //[Header("Camera")]
+    //public bool offSetCamera = false;
+    //public Vector3 cameraOffset = new Vector3(0, 12.8f, -8.92f);    
 
     CharacterController controller;
     Transform camera;
@@ -66,9 +66,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(direction * moveSpeed * Time.deltaTime);
     }
 
+    /*
     private void LateUpdate()
     {
         if(offSetCamera)
             camera.position = transform.position + cameraOffset;
-    }
+    }*/
 }
