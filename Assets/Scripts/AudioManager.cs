@@ -51,5 +51,26 @@ public class AudioManager : MonoBehaviour
             return;
         s.source.Pause();
 
+    }    
+
+    public void SetVolume(float volume)
+    {
+        foreach (Sound s in sounds)
+        {
+            s.volume = volume;
+            s.source.volume = s.volume;
+        }
+        
     }
+
+    public void SetVolume(string name, float volume)
+    {
+        Sound s = Array.Find(sounds, sounds => sounds.name == name);
+        if (s == null)
+            return;
+
+        s.volume = volume;
+        s.source.volume = volume;
+    }
+
 }

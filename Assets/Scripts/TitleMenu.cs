@@ -15,7 +15,12 @@ public class TitleMenu : MonoBehaviour
         }
         else if (buttonClicked == 1)
         {
+
             Application.Quit();
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
         }
     }
 }
