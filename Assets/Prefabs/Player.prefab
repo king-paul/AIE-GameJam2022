@@ -151,6 +151,15 @@ MonoBehaviour:
   haveDogFood: 0
   haveKey: 0
   haveToy: 0
+  OnCollectDogFood:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollectKey:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollectToy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1934242053
 MonoBehaviour:
   m_ObjectHideFlags: 0
