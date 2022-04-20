@@ -11,7 +11,7 @@ public class TitleMenu : MonoBehaviour
     {
         if (buttonClicked == 0)
         {
-            SceneManager.LoadScene("Opening Scene");
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
         }
         else if (buttonClicked == 1)
         {
