@@ -49,8 +49,11 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(state == EnemyState.Follow)
+        if (state == EnemyState.Follow)
+        {
+            agent.speed = 60;
             agent.destination = player.position;
+        }
 
         if (state == EnemyState.Look)
             LookInRange();
@@ -162,7 +165,7 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.other.tag == "Player")
         {            
-            SceneManager.LoadScene(1, LoadSceneMode.Single);
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
         }
 
     }
