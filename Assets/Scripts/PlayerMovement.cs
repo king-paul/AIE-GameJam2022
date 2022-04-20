@@ -54,8 +54,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else // player will move with isometric grid
         {
-            vertical = upRight * Input.GetAxis("Vertical");
-            horizontal = downRight * Input.GetAxis("Horizontal");
+            horizontal = upRight * Input.GetAxis("Vertical");
+            vertical = downRight * Input.GetAxis("Horizontal");
             
             direction = vertical + horizontal;
         }
