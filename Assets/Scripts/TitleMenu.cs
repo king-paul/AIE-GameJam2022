@@ -11,11 +11,15 @@ public class TitleMenu : MonoBehaviour
     {
         if (buttonClicked == 0)
         {
-            SceneManager.LoadScene("Opening Scene");
+            SceneManager.LoadScene("Main Scene");
         }
         else if (buttonClicked == 1)
         {
             Application.Quit();
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
         }
     }
 }
