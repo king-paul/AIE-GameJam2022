@@ -291,6 +291,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa41990f63566af4f94c4d1800ae6aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
       propertyPath: m_Name
       value: Chair (6)
@@ -547,6 +551,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ce86479f577d1f64f8b48d0d58e73aa9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f9579986bd6243e499947531108ca22e, type: 2}
     - target: {fileID: 919132149155446097, guid: ce86479f577d1f64f8b48d0d58e73aa9, type: 3}
       propertyPath: m_Name
       value: SingleBed
@@ -799,6 +807,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa41990f63566af4f94c4d1800ae6aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
       propertyPath: m_Name
       value: Chair (7)
@@ -861,6 +873,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f4c0fe3876d645d4fb8ebf7d1a38f94f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bceefa149e7f2b4eae77df65934e3e6, type: 2}
     - target: {fileID: 919132149155446097, guid: f4c0fe3876d645d4fb8ebf7d1a38f94f, type: 3}
       propertyPath: m_Name
       value: ClothesPile (1)
@@ -923,6 +939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa41990f63566af4f94c4d1800ae6aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
       propertyPath: m_Name
       value: Chair (1)
@@ -1402,6 +1422,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa41990f63566af4f94c4d1800ae6aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
       propertyPath: m_Name
       value: Chair (3)
@@ -1906,6 +1930,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ec73dc02d337b2c46a094552e20e5448, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bcd9d428cee3834d9df65fed3cdf35a, type: 2}
     - target: {fileID: 919132149155446097, guid: ec73dc02d337b2c46a094552e20e5448, type: 3}
       propertyPath: m_Name
       value: Lamp (1)
@@ -2248,6 +2276,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa41990f63566af4f94c4d1800ae6aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
       propertyPath: m_Name
       value: Chair (2)
@@ -2499,6 +2531,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ce86479f577d1f64f8b48d0d58e73aa9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f9579986bd6243e499947531108ca22e, type: 2}
     - target: {fileID: 919132149155446097, guid: ce86479f577d1f64f8b48d0d58e73aa9, type: 3}
       propertyPath: m_Name
       value: SingleBed
@@ -3291,6 +3327,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ec73dc02d337b2c46a094552e20e5448, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bcd9d428cee3834d9df65fed3cdf35a, type: 2}
     - target: {fileID: 919132149155446097, guid: ec73dc02d337b2c46a094552e20e5448, type: 3}
       propertyPath: m_Name
       value: Lamp
@@ -4708,6 +4748,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa41990f63566af4f94c4d1800ae6aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
       propertyPath: m_Name
       value: Chair (5)
@@ -4878,6 +4922,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bcde693236369004799004837ed7ed9d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b2d49e00fc9694d40be9c7d0fae52cdd, type: 2}
     - target: {fileID: 919132149155446097, guid: bcde693236369004799004837ed7ed9d, type: 3}
       propertyPath: m_Name
       value: BedsideTable
@@ -4943,6 +4991,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa41990f63566af4f94c4d1800ae6aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
       propertyPath: m_Name
       value: Chair (4)
@@ -5186,6 +5238,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bcde693236369004799004837ed7ed9d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b2d49e00fc9694d40be9c7d0fae52cdd, type: 2}
     - target: {fileID: 919132149155446097, guid: bcde693236369004799004837ed7ed9d, type: 3}
       propertyPath: m_Name
       value: BedsideTable (2)
@@ -5628,6 +5684,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f4c0fe3876d645d4fb8ebf7d1a38f94f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bceefa149e7f2b4eae77df65934e3e6, type: 2}
     - target: {fileID: 919132149155446097, guid: f4c0fe3876d645d4fb8ebf7d1a38f94f, type: 3}
       propertyPath: m_Name
       value: ClothesPile
@@ -5706,7 +5766,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14a82ac662a10d841b80c77acd111bd4, type: 2}
+  - {fileID: 2100000, guid: 76e41681157a11e4c834962c6fca40fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5803,7 +5863,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e50e1518f2ba5444793c92e3e24b5541, type: 2}
+  - {fileID: 2100000, guid: a063ad058daeffa49a9c6f63bd65f2b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6079,6 +6139,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa41990f63566af4f94c4d1800ae6aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: d48d5d019a84c5f47998a67028367d83, type: 3}
       propertyPath: m_Name
       value: Chair
@@ -6545,6 +6609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f4c0fe3876d645d4fb8ebf7d1a38f94f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bceefa149e7f2b4eae77df65934e3e6, type: 2}
     - target: {fileID: 919132149155446097, guid: f4c0fe3876d645d4fb8ebf7d1a38f94f, type: 3}
       propertyPath: m_Name
       value: ClothesPile (3)
@@ -6949,6 +7017,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f4c0fe3876d645d4fb8ebf7d1a38f94f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bceefa149e7f2b4eae77df65934e3e6, type: 2}
     - target: {fileID: 919132149155446097, guid: f4c0fe3876d645d4fb8ebf7d1a38f94f, type: 3}
       propertyPath: m_Name
       value: ClothesPile (2)
@@ -7106,6 +7178,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ec73dc02d337b2c46a094552e20e5448, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bcd9d428cee3834d9df65fed3cdf35a, type: 2}
     - target: {fileID: 919132149155446097, guid: ec73dc02d337b2c46a094552e20e5448, type: 3}
       propertyPath: m_Name
       value: Lamp (2)
@@ -7176,6 +7252,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ce86479f577d1f64f8b48d0d58e73aa9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f9579986bd6243e499947531108ca22e, type: 2}
     - target: {fileID: 919132149155446097, guid: ce86479f577d1f64f8b48d0d58e73aa9, type: 3}
       propertyPath: m_Name
       value: SingleBed
@@ -7241,6 +7321,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bcde693236369004799004837ed7ed9d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b2d49e00fc9694d40be9c7d0fae52cdd, type: 2}
     - target: {fileID: 919132149155446097, guid: bcde693236369004799004837ed7ed9d, type: 3}
       propertyPath: m_Name
       value: BedsideTable (1)
@@ -9235,7 +9319,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 8f059e695e0c8f44882ae607698d494b, type: 3}
+  - {fileID: 2100000, guid: 810d2e0610a9d4746a4e9c4799f2c1d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9440,7 +9524,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: aaec6477f60f7b84da2244f463a68936, type: 3}
+  - {fileID: 2100000, guid: 65ba3ef4fe9b60948b651301a3df9765, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9563,7 +9647,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: aaec6477f60f7b84da2244f463a68936, type: 3}
+  - {fileID: 2100000, guid: 65ba3ef4fe9b60948b651301a3df9765, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9809,7 +9893,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: aaec6477f60f7b84da2244f463a68936, type: 3}
+  - {fileID: 2100000, guid: 65ba3ef4fe9b60948b651301a3df9765, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9850,7 +9934,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: aaec6477f60f7b84da2244f463a68936, type: 3}
+  - {fileID: 2100000, guid: 65ba3ef4fe9b60948b651301a3df9765, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10012,7 +10096,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: acaf5425f30fda14ca959a47cc47119e, type: 2}
+  - {fileID: 2100000, guid: b3c2c5bf304f2ba40a24045af6216792, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10053,7 +10137,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64f0f0ebfa736eb46bc76a6878724f55, type: 2}
+  - {fileID: 2100000, guid: 32c09937520bfdc44a883ce399e23334, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10094,7 +10178,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64f0f0ebfa736eb46bc76a6878724f55, type: 2}
+  - {fileID: 2100000, guid: 32c09937520bfdc44a883ce399e23334, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10135,7 +10219,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e50e1518f2ba5444793c92e3e24b5541, type: 2}
+  - {fileID: 2100000, guid: a063ad058daeffa49a9c6f63bd65f2b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10176,7 +10260,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14a82ac662a10d841b80c77acd111bd4, type: 2}
+  - {fileID: 2100000, guid: 76e41681157a11e4c834962c6fca40fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10217,7 +10301,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e50e1518f2ba5444793c92e3e24b5541, type: 2}
+  - {fileID: 2100000, guid: a063ad058daeffa49a9c6f63bd65f2b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10258,7 +10342,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e50e1518f2ba5444793c92e3e24b5541, type: 2}
+  - {fileID: 2100000, guid: a063ad058daeffa49a9c6f63bd65f2b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
