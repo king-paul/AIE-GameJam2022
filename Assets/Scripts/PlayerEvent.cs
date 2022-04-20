@@ -16,6 +16,11 @@ public class PlayerEvent : MonoBehaviour
     public UnityEvent OnCollectDogFood, onCollectKey, onCollectToy, onCollectionComplete, 
                       onDie, onWinGame;
 
+    public void Start()
+    {
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 3) // item layer

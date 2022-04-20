@@ -24,8 +24,8 @@ public class ObstructionViewer : MonoBehaviour
     {
         RaycastHit hit;
         
-        if(Physics.SphereCast(transform.position, hideRadius, hideDirection, out hit))
-        //if (Physics.Raycast(transform.position, Vector3.left, out hit))
+        if(Physics.SphereCast(transform.root.position, hideRadius, hideDirection, out hit))
+        //if (Physics.Raycast(transform.root.position, Vector3.left, out hit))
         {
             foreach (GameObject wall in walls)
             {
@@ -38,8 +38,8 @@ public class ObstructionViewer : MonoBehaviour
             }
         }
 
-        if(Physics.SphereCast(transform.position, showRadius, showDirection, out hit))
-        //if (Physics.Raycast(transform.position, Vector3.right, out hit))
+        if(Physics.SphereCast(transform.root.position, showRadius, showDirection, out hit))
+        //if (Physics.Raycast(transform.root.position, Vector3.right, out hit))
         {
             foreach (GameObject wall in walls)
             {
@@ -51,5 +51,12 @@ public class ObstructionViewer : MonoBehaviour
 
             }
         }
-    } 
+    }
+
+    private void OnDrawGizmos()
+    {
+        //Gizmos.dtransform.position, hideRadius);
+
+        Gizmos.DrawRay(transform.position, transform.right);
+    }
 }
