@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     CharacterController controller;
     Transform camera;
+    Animator animator;
     Vector3 direction;
     Vector3 vertical, horizontal;
     Vector3 upRight, downRight;
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         camera = Camera.main.transform;
+        animator = GetComponentInChildren<Animator>();
 
         if (camera.rotation.y >= 0)
         {
@@ -64,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
             if(mesh)
                 mesh.forward = direction; // rotate character mesh to face direction it is moving
         }
+
+        animator.SetFloat("Velocity", (direction * moveSpeed).magnitude);               
 
         controller.Move(direction * moveSpeed * Time.deltaTime);
     }
