@@ -34,6 +34,7 @@ public class EnemyController : MonoBehaviour
     {
         if (state == EnemyState.Follow)
         {
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
             agent.speed = 60;
             agent.destination = player.position;
         }
