@@ -9,11 +9,12 @@ public class PlayerEvent : MonoBehaviour
     //public Transform startPosition;
 
     // item variables
-    [SerializeField] bool haveDogFood = false;
-    [SerializeField] bool haveKey = false;
-    [SerializeField] bool haveToy = false;
+    bool haveDogFood = false;
+    bool haveKey = false;
+    bool haveToy = false;
 
-    public UnityEvent OnCollectDogFood, onCollectKey, onCollectToy;
+    public UnityEvent OnCollectDogFood, onCollectKey, onCollectToy, onCollectionComplete, 
+                      onDie, onWinGame;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -38,6 +39,17 @@ public class PlayerEvent : MonoBehaviour
             }
 
             GameObject.Destroy(other.gameObject);
+
+            if (haveDogFood && haveKey && haveToy)
+                onCollectionComplete.Invoke();
+        }
+
+        if(other.gameObject.tag == "Exit")
+        {
+            if (haveDogFood && haveKey && haveToy)
+                onWinGame.Invoke();
+            else
+                Debug.Log("You do not have all of the items");
         }
     }
 
@@ -45,6 +57,7 @@ public class PlayerEvent : MonoBehaviour
     {
         if(hit.gameObject.layer == 6) // enemy layer
         {
+            onDie.Invoke();
             // reload the scene
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         }

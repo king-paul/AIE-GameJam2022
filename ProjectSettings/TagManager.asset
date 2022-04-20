@@ -8,6 +8,9 @@ TagManager:
   - Key
   - Toy
   - Waypoint
+  - Guard
+  - Exit
+  - Icon
   layers:
   - Default
   - TransparentFX
