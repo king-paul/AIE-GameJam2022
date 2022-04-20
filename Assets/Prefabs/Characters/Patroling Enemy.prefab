@@ -362,10 +362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
-  leftAngle: 270
-  rightAngle: 90
-  turnSpeed: 30
-  waitTime: 1
 --- !u!114 &4368765967516557780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,9 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 3
-  patrtolRoute:
-  - {fileID: 0}
-  - {fileID: 0}
+  patrtolRoute: []
 --- !u!114 &140911131
 MonoBehaviour:
   m_ObjectHideFlags: 0

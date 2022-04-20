@@ -1,28 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 
-public enum EnemyState
+public class EnemyLook : MonoBehaviour
 {
-    Standby,
-    Patrol,
-    Look,
-    Follow
-}
+    enum Direction { left, right, center };
 
-enum Direction { left, right, center };
-
-public class EnemyController : MonoBehaviour
-{
-    NavMeshAgent agent;
-    Transform player;
-    [SerializeField] EnemyState state;
-
-    [Header("Look State")]
-    //[Range(-180, 180)]
-    float startAngle = 0;
     [Range(-180, 360)]
     public float leftAngle = 270;
     [Range(-180, 360)]
@@ -31,41 +14,40 @@ public class EnemyController : MonoBehaviour
     public float turnSpeed = 30f;
     [Range(0, 10)]
     public float waitTime = 1f;
+    public bool invertRotation = false;
 
-    //bool clockwise;
-    Direction targetRotation;
+    private float startAngle;
+    private Direction targetRotation;
 
-    public EnemyState State { get => state; set => state = value; }    
+    EnemyController controller;
 
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        player = GameObject.FindWithTag("Player").transform;
-
+        controller = GetComponent<EnemyController>();
         startAngle = transform.rotation.eulerAngles.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (state == EnemyState.Follow)
+        if (controller.State == EnemyState.Look)
         {
-            agent.speed = 60;
-            agent.destination = player.position;
+            if (invertRotation)
+                LookInRangeInverted();
+            else
+                LookInRange();
+            
         }
-
-        if (state == EnemyState.Look)
-            LookInRange();
     }
 
-    void LookInRange()
+    void OldLookInRange()
     {
         float angle = Vector3.SignedAngle(Vector3.forward, transform.forward, Vector3.up);
 
         //Debug.Log(angle);
-        
-        if(targetRotation == Direction.left)
+
+        if (targetRotation == Direction.left)
         {
             transform.Rotate(0, -turnSpeed * Time.deltaTime, 0);
 
@@ -73,13 +55,13 @@ public class EnemyController : MonoBehaviour
             {
                 //Debug.Log("anti-clockwise Angle has been reached");
                 targetRotation = Direction.right;
-                State = EnemyState.Standby;
+                controller.State = EnemyState.Standby;
 
                 Invoke("StartLooking", waitTime);
             }
 
         }
-        else if(targetRotation == Direction.right)
+        else if (targetRotation == Direction.right)
         {
             transform.Rotate(0, turnSpeed * Time.deltaTime, 0);
 
@@ -89,12 +71,12 @@ public class EnemyController : MonoBehaviour
             {
                 //Debug.Log("anti-clockwise Angle has been reached");
                 targetRotation = Direction.center;
-                State = EnemyState.Standby;
+                controller.State = EnemyState.Standby;
 
                 Invoke("StartLooking", waitTime);
             }
         }
-        else if(targetRotation == Direction.center)
+        else if (targetRotation == Direction.center)
         {
             transform.Rotate(0, -turnSpeed * Time.deltaTime, 0);
 
@@ -102,7 +84,7 @@ public class EnemyController : MonoBehaviour
             {
                 //Debug.Log("anti-clockwise Angle has been reached");
                 targetRotation = Direction.left;
-                State = EnemyState.Standby;
+                controller.State = EnemyState.Standby;
 
                 Invoke("StartLooking", waitTime);
             }
@@ -110,19 +92,19 @@ public class EnemyController : MonoBehaviour
 
     }
 
-    void NewLookInRange()
+    void LookInRange()
     {
         Vector3 rotation = transform.rotation.eulerAngles;
 
         if (targetRotation == Direction.left) // left rotation
         {
             rotation.y -= 0.3f;
-            if (rotation.y > 180.0f + startAngle && rotation.y < leftAngle + startAngle)
+            if (rotation.y > 180.0f + startAngle && rotation.y < startAngle + leftAngle)
             {
-                rotation.y = 270.0f;
+                rotation.y = startAngle + leftAngle;
                 targetRotation = Direction.right;
 
-                State = EnemyState.Standby;
+                controller.State = EnemyState.Standby;
                 Invoke("StartLooking", waitTime);
             }
         }
@@ -130,16 +112,16 @@ public class EnemyController : MonoBehaviour
         if (targetRotation == Direction.right) // right rotation
         {
             rotation.y += 0.3f;
-            if (rotation.y < 180.0f + startAngle && rotation.y > rightAngle + startAngle)
+            if (rotation.y < startAngle + 180.0f && rotation.y > startAngle + rightAngle)
             {
-                rotation.y = 90.0f;
+                rotation.y = rightAngle;
                 targetRotation = Direction.center;
 
-                State = EnemyState.Standby;
+                controller.State = EnemyState.Standby;
                 Invoke("StartLooking", waitTime);
             }
         }
-        if(targetRotation == Direction.center) // back to start
+        if (targetRotation == Direction.center) // back to start
         {
             rotation.y -= 0.3f;
 
@@ -148,25 +130,63 @@ public class EnemyController : MonoBehaviour
                 rotation.y = startAngle;
                 targetRotation = Direction.left;
 
-                State = EnemyState.Standby;
+                controller.State = EnemyState.Standby;
                 Invoke("StartLooking", waitTime);
             }
-        }        
+        }
+
+        transform.rotation = Quaternion.Euler(rotation);
+    }
+
+    void LookInRangeInverted()
+    {
+        Vector3 rotation = transform.rotation.eulerAngles;
+
+        if (targetRotation == Direction.left) // anti-clockwise
+        {
+            rotation.y -= 0.3f;
+
+            if (rotation.y <= rightAngle)
+            {
+                targetRotation = Direction.right;
+
+                controller.State = EnemyState.Standby;
+                Invoke("StartLooking", waitTime);
+            }
+        }
+
+        if (targetRotation == Direction.right) // clockwise
+        {
+            rotation.y += 0.3f;
+
+            if (rotation.y >= leftAngle)
+            {
+                targetRotation = Direction.center;
+
+                controller.State = EnemyState.Standby;
+                Invoke("StartLooking", waitTime);
+            }
+        }
+
+        if (targetRotation == Direction.center) // back to start
+        {
+            rotation.y -= 0.3f;
+
+            if (rotation.y <= startAngle)
+            {
+                rotation.y = startAngle;
+                targetRotation = Direction.left;
+
+                controller.State = EnemyState.Standby;
+                Invoke("StartLooking", waitTime);
+            }
+        }
 
         transform.rotation = Quaternion.Euler(rotation);
     }
 
     private void StartLooking()
     {
-        State = EnemyState.Look;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.other.tag == "Player")
-        {            
-            SceneManager.LoadScene(2, LoadSceneMode.Single);
-        }
-
+        controller.State = EnemyState.Look;
     }
 }
